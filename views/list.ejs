@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1><%=today%> </h1>
+    <ul>
+      <li>Eat Food</li>
+      <li>Wash Clothes</li>
+      <% for(var x in newListitem){%>
+        <li><%=newListitem[x]%></li>
+      <%}%>
+    </ul>
+    <form  action="/" method="post">
+      <input type="text" name="task" >
+      <button type="submit" name="button">Submit</button>
+    </form>
+  </body>
+</html>
