@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>To Do List</title>
-  </head>
-  <body>
-    <h1><%=today%> </h1>
-    <ul>
-      <li>Eat Food</li>
-      <li>Wash Clothes</li>
-      <% for(var x in newListitem){%>
-        <li><%=newListitem[x]%></li>
-      <%}%>
-    </ul>
-    <form  action="/" method="post">
-      <input type="text" name="task" >
-      <button type="submit" name="button">Submit</button>
-    </form>
-  </body>
-</html>
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+      <h1><%=listTitle%> </h1>
+    </div>
+
+    <div class="box">
+        <% for(var i=0;i< newListitems.length;i++){%>
+          <div class="item">
+            <input type="checkbox" >
+            <p><%=newListitems[i]%></p>
+          </div>
+
+        <%}%>
+
+    </div>
+    <div class="box box-ip">
+      <form  action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Task" autocomplete="off">
+        <button type="submit" name="button" value="<%=listTitle%>">+</button>
+      </form>
+    </div>
+<%- include("footer") -%>
