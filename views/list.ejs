@@ -5,13 +5,13 @@
     </div>
 
     <div class="box">
-        <% for(var i=0;i< newListitems.length;i++){%>
+        <% listItems.forEach(function(item){%>
           <div class="item">
             <input type="checkbox" >
-            <p><%=newListitems[i]%></p>
+            <p><%=item.name%></p>
           </div>
 
-        <%}%>
+        <%})%>
 
     </div>
     <div class="box box-ip">
